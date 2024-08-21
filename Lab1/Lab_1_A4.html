@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lab_1_A4.html</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let a=Number.parseInt(prompt("Enter number that how many tearm of fabonaci series you find "));
+		let t1=0;
+		let t2=1;
+		let temp=0;
+		document.write("Fibonaci series like this </br>"+t1+",");
+		document.write(t2);
+		for(let i=0;i<a;i++){
+           temp=t1;
+           t1=t2;
+           t2=t1+temp;
+           document.write(","+t2);
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lab_1_A2.html</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let a=Number.parseInt(prompt("Enter number which you check number is prime or not "));
+		let i=2;
+		let count=0;
+		while(i<=a/2){
+          if (a%i==0) {
+          	count++;
+          	document.write("Given Number"+a+" is not prime");
+          	break;
+          }
+          i++;
+		}
+		if(count==0){
+			document.write("Given Number "+a+"is prime");
+		}
+	</script>
+</body>
+</html>

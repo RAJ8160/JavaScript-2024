@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aemstrong</title>
+</head>
+<body>
+<script type="text/javascript">
+	a=parseInt(prompt("Enter number "));
+	c=a;
+	sum=0;
+	while(a!=0){
+     sum=sum+((a%10)*(a%10)*(a%10));
+     a=parseInt(a/10);
+	}
+	if(c==sum){
+		document.write("Number is Aemstrong");
+	}else{
+		document.write("Number is not Aemstrong");
+	}
+</script>
+</body>
+</html>

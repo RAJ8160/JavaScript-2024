@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lab_1_A1.html</title>
+</head>
+<body>
+<script type="text/javascript">
+	let a=prompt("Enter Simbol of method Which you apply in inputes");
+	let b=Number.parseInt(prompt("Enter fist number "));
+	let c=Number.parseInt(prompt("Enter second number "));
+	if(a=='+'){
+		document.write("Sum is "+(b+c)) ;
+	}else if(a=='-'){
+		document.write("Substrection is "+(b-c)) ;
+	}else if(a=='*'){
+		document.write("Multyplication is "+(b*c)) ;
+	}else if(a=='/'){
+        if(b==0){
+        	document.write("a/b is undefind ");
+        }
+        document.write("Division is "+(b/c)) ;
+	}
+</script>
+</body>
+</html>
