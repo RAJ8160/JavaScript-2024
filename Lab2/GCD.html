@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GCD.html</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// Time Complexity For this code is O(b);
+		// Here we use var keyword that is keyword of ES5
+		var arr=[];
+		var mult=1;
+
+		// First we take Two inpute from user
+		var a=parseInt(prompt('Enter number a :'));
+		var b=parseInt(prompt('Enter number b :'));
+		
+		// We create function gcd to find gcd of given two numbers
+		function gcd(a,b){
+			while(b!=0)
+				{
+					// Scop of let is in Bracket here it work only in while
+					let temp=b;
+					b = a % b;
+					a=temp;
+				}
+			return a;
+		}
+
+		// print ans of given quation
+		document.write("GCD of these numbers"+a+"or"+b+" is "+gcd(a,b));
+	</script>
+
+</body>
+</html>

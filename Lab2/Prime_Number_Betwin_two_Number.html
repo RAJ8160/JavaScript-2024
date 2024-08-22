@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prime Numbers Between Two Numbers</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Time Complexity For this code is O(n^2);
+
+        // Prompt the user for input and parse it to integers
+        var a = Number.parseInt(prompt("Enter the first number:"));
+        var b = Number.parseInt(prompt("Enter the second number:"));
+
+        // Ensure a is less than b for the loop
+        if (a > b) 
+            {
+                var temp = a;
+                a = b;
+                b = temp;
+            }
+
+        document.write('Prime numbers between ' + a + ' and ' + b + ' are: ');
+
+        // Loop through the range
+        for (let num = a; num <= b; num++) 
+            {
+                if (num > 1)
+                     { // Prime numbers are greater than 1
+                        let isPrime = true;
+                        for (let i = 2; i <=num/2; i++)
+                             {
+                                    if (num % i === 0)
+                                         {
+                                            isPrime = false;
+                                            break;
+                                         }
+                            }
+                        if (isPrime)
+                             {
+                                document.write(num + " ");
+                             }
+                    }
+            }
+    </script>
+</body>
+</html>

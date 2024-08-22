@@ -1,0 +1,43 @@
+<!-- 5. Write a JavaScript to take 2-digit number and then separate these 2 digits, then multiply
+ƒrst digit by itself for second digit times. (B)
+(For example, 23 should be separated as 2 and 3. 2 should multiply with itself 3 times) -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lab_2_5.html</title>
+</head>
+<body>
+<script type="text/javascript">
+	// Time Complexity For this code is O(pow);
+
+		// Take inpute from user using prompt that is window's element
+		// Scope of let is in bracketes
+		let a=parseInt(prompt("Enter Number a"));
+
+		// Find second digit of given Number
+		let pow=a%10;
+
+		// document.write(pow);
+		// convert base into integer otherwise given ans is in floating point
+
+		// Find  Base of given number
+
+		let base=Math.floor(a/10);
+		// document.write(base);
+
+		let mult=1;
+	
+		for(var i=0;i<pow;i++)
+			// Scop of var keyWord is it's parent function here parent function is Script tag
+			{
+				// multiply base on pow times
+		         mult*=base;
+			}
+
+	    // print ans		
+		document.write(" Anser after for given number "+a+"opration is "+mult);
+</script>
+</body>
+</html>
