@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculater</title>
+	<style type="text/css">
+		input{
+			width: 100%;
+			height: 100%;
+			font-size: xx-large;
+            font-weight:bold;
+      		}
+
+		.display input{
+				margin: 0px;
+				padding: 0px;
+		}
+        .dis{
+        	text-align:right;
+        	font-size:35px;
+        }
+		
+	</style>
+</head>
+<body>
+	<div class="table">
+<table  width="50%" height="500px" >
+	<tr>
+		<td class="display" colspan="4" width="20px">
+			<input type="text" id="ans" class="dis">
+		</td>
+	</tr>
+	<tr>
+		<td><input type="button"  value="7" onclick="addNo('7')"></td>
+		<td><input type="button"  value="8" onclick="addNo('8')"></td>
+		<td><input type="button"  value="9" onclick="addNo('9')"></td>
+		<td><input type="button"  value="+" onclick="addNo('+')"></td>	
+	</tr>
+	<tr>
+		<td><input type="button"  value="4" onclick="addNo('4')"></td>
+		<td><input type="button"  value="5" onclick="addNo('5')"></td>
+		<td><input type="button"  value="6" onclick="addNo('6')"></td>
+		<td><input type="button"  value="-" onclick="addNo('-')"></td>	
+	</tr>
+	<tr>
+		<td><input type="button"  value="1" onclick="addNo('1')"></td>
+		<td><input type="button"  value="2" onclick="addNo('2')"></td>
+		<td><input type="button"  value="3" onclick="addNo('3')"></td>
+		<td><input type="button"  value="*" onclick="addNo('*')"></td>	
+	</tr>
+	<tr>
+		<td><input type="button"  value="c" onclick="clearNum('c')"></td>
+		<td><input type="button"  value="0" onclick="addNo('0')"></td>
+		<td><input type="button"  value="=" onclick="finalAns('=')"></td>
+		<td><input type="button"  value="/" onclick="addNo('/')"></td>	
+	</tr>
+</table>
+
+<script type="text/javascript">
+	function addNo(value){
+		console.log(value)
+		ans1=document.getElementById('ans');
+		ans1.value+=value;
+	}
+	function finalAns(){
+		ans1=document.getElementById('ans');
+		disp=eval(ans1.value);
+		ans1.value=disp
+	}
+	function clearNum(){
+		clear=document.getElementById('ans')
+		clear.value=" "
+	}
+</script>
+</body>
+</html>

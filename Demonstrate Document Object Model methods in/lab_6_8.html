@@ -1,0 +1,81 @@
+<!-- 8. Write a JavaScript that handles following mouse events. Add necessary elements. (B)
+If the mouse is over the heading should turn yellow and if the mouse goes out of the
+heading it should turn black.
+If ƒndtime button is clicked show time and date information.
+If button named “red” is clicked, background should change to red and If button named
+“green” is clicked, background should
+change to green. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lab_6_8.html</title>
+	<!-- This is style tag for this html page -->
+  <style type="text/css">
+  	#h1{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+}
+.btn{
+	border-radius:20px;
+	width:100px;
+	height:50px;
+	color:blue;
+}
+  </style>
+</head>
+<body>
+<h1 id="h1" onmouseover="abc()" onmouseout="xyz()">My Headding</h1>
+    <button class="btn" onclick="red()">Red</button>
+	<button class="btn"  onclick="yellow()" >Yellow</button>
+	<button class="btn"  onclick="green()">Green</button>
+	<button class="btn"  onclick="pink()">Pink</button>
+	<button class="btn"  onclick="cyan()">Cyan</button>
+<script type="text/javascript">
+	function abc(){
+		document.getElementById('h1').style.color="red";
+		document.getElementById('h1').style.shadow=20+'px';
+		document.getElementById('h1').style.fontSize=100+'px';
+	}
+
+	function xyz(){
+		document.getElementById('h1').style.color="blue";
+		document.getElementById('h1').style.shadow=20+'px';
+		document.getElementById('h1').style.fontSize=50+'px';
+
+	}
+
+	// if you enter red button
+	function red(){
+        document.body.style.backgroundColor="red";
+	}
+
+	// if you enter yellow button
+	function yellow(){
+        document.body.style.backgroundColor="yellow";
+	}
+
+	// if you enter green button
+	function green(){
+        document.body.style.backgroundColor="green";
+	}
+
+	// if you enter pink button
+	function pink(){
+        document.body.style.backgroundColor="pink";
+	}
+
+	// if you enter cyan button
+	function cyan(){
+        document.body.style.backgroundColor="cyan";
+	}
+
+	// Lower Code is for Set Interval
+	// setInterval(red,5000)
+	// setInterval(yellow,1000)
+	// setInterval(green,2000)
+	// setInterval(pink,3000)
+</script>
+</body>
+</html>

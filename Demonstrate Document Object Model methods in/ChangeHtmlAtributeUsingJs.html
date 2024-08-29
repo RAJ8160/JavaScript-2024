@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ChangeHtmlAtributeUsingJs.html</title>
+	<style type="text/css">
+/*		Here We write css for incide code*/
+		button{
+			width:100px;
+			height:50px;
+			color:white;
+			background-color:green;
+			border-radius:10px;
+		}
+	</style>
+</head>
+<body>
+<h2>What can JavaScript Do?</h2>
+<p>JavaScript can Change atribute values.</p>
+<p>In This Case javascript change the valueof the src (source) attribute of an image</p>
+
+<!-- When any one click on this button abc() called -->
+<button onclick="abc()">bullbe off</button>
+<img src="D:\Sem_3_CSE_JS\Demonstrate Document Object Model methods in\th.jpeg" id="img">
+
+<!-- when any one click on this button xyz() called -->
+<button onclick="xyz()">bullbe on</button>
+</body>
+<script type="text/javascript">
+	function abc() {
+		var img=document.getElementById('img');
+		 img.src="D:/Sem_3_CSE_JS/Demonstrate Document Object Model methods in/th.jpeg";
+	}
+	abc();
+	function xyz() {
+		var img=document.getElementById('img');
+		 img.src="D:/Sem_3_CSE_JS/Demonstrate Document Object Model methods in/th (1).jpeg";
+	}
+	xyz();
+</script>
+</html>

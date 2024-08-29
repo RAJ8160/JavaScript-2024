@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lab_1_A5.html</title>
+</head>
+<body>
+<script type="text/javascript">
+    // Prompt user for input
+    let a = Number.parseInt(prompt("Enter a number:"));
+
+    // Check if input is a number and greater than 0
+    if (isNaN(a) || a < 0) {
+        document.write("Please enter a valid positive number.");
+    } else {
+        let b = 0;
+        let c = a;
+
+        // Reverse the number
+        while (c > 0) {
+            b = b * 10 + (c % 10);
+            c = Math.floor(c / 10); // Use Math.floor to avoid floating-point issues
+        }
+
+        // Output the original and reversed numbers
+        document.write("Original number: " + a + "<br>");
+        document.write("Reversed number: " + b + "<br>");
+
+        // Check if the number is a palindrome
+        if (a === b) {
+            document.write("This number is a palindrome.");
+        } else {
+            document.write("This number is not a palindrome.");
+        }
+    }
+</script>
+</body>
+</html>

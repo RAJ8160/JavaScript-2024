@@ -1,0 +1,58 @@
+<!-- WAP to recognize which mouse event is ƒired. (A) -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lab_6_2.html</title>
+	<!-- CSS for this page -->
+	<style type="text/css">
+		#btn{
+			padding:20px;
+			display:block;
+			border-radius:10px;
+			margin:auto;
+			background-color:red;
+			box-shadow:darkgray 5px;
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="main" >
+		<h1 style="text-align:center;">Mouse Properties</h1>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+	<button id="btn" onclick="toggleHide()">show/Hide</button>
+	<!-- JavaScript for this page -->
+	<script type="text/javascript">
+		let main=document.getElementById('main');
+		  // main.addEventListener('mouseover',function run(){
+		  // 	alert("Mouse Inside");
+		  // });
+		  // main.addEventListener('mouseout',function run(){
+		  // 	alert("Mouse now want Outside");
+		  // });
+
+
+		/* This function toggleHide if tex is visible that function hide it other wise that function visible it */
+		function toggleHide() {
+		   // let btn=document.getElementById('btn');
+		   // let main=document.getElementById('main');
+			if(main.style.display!='none'){
+				main.style.display='none';
+			}
+			else{
+	        main.style.display='block';
+	         }	
+		}
+		
+	</script>
+
+</body>
+</html>

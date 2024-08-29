@@ -1,0 +1,45 @@
+<!-- 4. WAP to recognize which form event is ƒired. (B) -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>lab_6_4.html</title>
+	<style type="text/css">
+/*		CSS for this page*/
+
+		/*
+			It target main class 
+			. operater target class in css 
+			# target  Id in CSS 
+			otherwise you target by tagename
+		 */
+		.main{
+			width:100%;
+			display:flex;
+/*			background-color:red;*/
+			justify-content:center;
+			align-items:center;
+		}
+		#name{
+			border-radius:5px;
+		}
+	</style>
+</head>
+<body>
+<div  class="main">
+	<label>Name :</label>
+	<input type="text" id="name">
+	<button onclick="gaveh1()">Submit</button>
+</div>
+ <h1 id="head"></h1>
+ <script type="text/javascript">
+ 
+ 	function gaveh1(){
+ 		ans=document.getElementById('head');
+ 		name=document.getElementById('name').value;
+ 		ans.innerHTML=name;
+ 	}
+ </script>
+</body>
+</html>

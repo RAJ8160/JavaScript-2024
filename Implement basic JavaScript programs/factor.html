@@ -1,0 +1,34 @@
+<!-- 1. WAP in JavaScript to print the factors of given number. (A) -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Factore.html</title>
+</head>
+<body>
+<script type="text/javascript">
+	// Time Complexity For this code is O(n);
+
+	/*
+		Take input from user using prompt pop pup box
+		That is window's inBuild function
+		Number means we take integer inpute
+	*/
+
+	let a=Number.parseInt(prompt("Enter number which factor you want to find"));
+
+    // print Factors we print 1 befor and prind another in for loop becuase we gave patter like 1,2,3...
+	document.write("Factor of "+a+" is :");
+	document.write("1");
+	for(let i=2;i<a;i++)
+		{
+			if(a%i==0)
+				{
+					document.write(","+i);
+				}
+		}
+
+</script>
+</body>
+</html>

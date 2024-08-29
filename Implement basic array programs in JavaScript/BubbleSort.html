@@ -1,0 +1,72 @@
+<!-- 3. WAP to read an array from the user and sort them using bubble sort. (A) -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BubbleSort.html</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	// Take Length of Array from user
+	let a=Number.parseInt(prompt("Enter length of array"));
+    
+    // Intialize Array
+    var arr=[a];
+    
+    // Gave Value in Array
+    for(var i=0;i<a;i++)
+    {
+    	arr[i]=Number.parseInt(prompt("Enter element of index"+i));
+    }
+
+    // printArray in console
+    console.log(arr);
+
+    // It function is use to check Given array is Sorted or not
+    function isSort(arr) {
+    	for(var i=0;i<arr.length;i++)
+    	{
+    		if(arr[i]>arr[i+1])
+	    		{
+	    			return false;
+	    		}
+    	}
+    	return true;
+    }
+
+    // It function is use to print array 
+    function printArray(arr){
+    	for(var i=0;i<arr.length;i++)
+    	{
+    		document.write(arr[i]+" ");
+    	}
+    }
+
+    if(isSort(arr))
+	    {
+	    	document.write("Given Array is All ready Shorted");
+	   }
+    else{
+    	   for (var i = 0; i < a - 1; i++)
+	        {
+			        for (var j = 0; j < a - i - 1; j++)
+				    {
+				            if (arr[j] > arr[j + 1]) 
+					        {
+					                // Swap arr[j] and arr[j + 1]
+					                var temp = arr[j];
+					                arr[j] = arr[j + 1];
+					                arr[j + 1] = temp;
+					       }
+				   }
+	       }
+       }
+
+    printArray(arr);
+
+  
+</script>
+</body>
+</html>

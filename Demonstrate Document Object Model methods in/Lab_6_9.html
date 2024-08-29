@@ -1,0 +1,28 @@
+<!-- 9. Write a JavaScript that handles following mouse events. Add necessary elements. (B)
+JavaScript gives the key code for the key pressed.
+If the key pressed is “a”,”e”,”i”,”o”,”u”, the script should announce that vowel is pressed.
+When the key is released background should change to blue. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lab_6_9.html</title>
+</head>
+<body>
+<script type="text/javascript">
+	/*
+	var is keyword of old JS ES5
+	It's scop is parent function's perentheses
+    */
+    var a=prompt("Enter spelling which you want if you entered spelling which start with vowel\n BackGround color is Red otherwise BackGround color is Blue ");
+
+    // Check entered character is start with wovel 
+    if(a.charAt(0)=='a'||a.charAt(0)=='A'||a.charAt(0)=='e'||a.charAt(0)=='E'||a.charAt(0)=='i'||a.charAt(0)=='I'||a.charAt(0)=='u'||a.charAt(0)=='U'||a.charAt(0)=='o'||a.charAt(0)=='O'){
+         document.body.style.backgroundColor="Red";    
+    }else{
+    	document.body.style.backgroundColor="blue";
+    }
+</script>
+</body>
+</html>

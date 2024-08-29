@@ -1,0 +1,38 @@
+<!-- WAP to change background color on click of button. (A) -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>lab_6_1.html</title>
+	<style type="text/css">
+		#btn{
+			width:300px;
+			height:80px;
+			display:block;
+			margin:auto;
+			color:white;
+			font-size:20px;
+			margin-top:250px;
+			box-shadow:lightcyan;
+			background-color:red;
+			border-radius:5px;
+		}
+	</style>
+</head>
+<body>
+	<button onclick="changecolor()" id="btn">Click Here To Chense colore</button>
+<script type="text/javascript">
+	function changecolor(){
+	var r=parseInt(Math.random()*256);
+	var g=parseInt(Math.random()*256);
+	var b=parseInt(Math.random()*256);
+	const color="rgb("+r+","+g+","+b+")";
+	document.body.style.background=color;
+	const color2="rgb("+(r+1)+","+(g+1)+","+(b+1)+")";
+    document.getElementById('btn').style.background=color2;
+}
+</script>
+</body>
+</html>

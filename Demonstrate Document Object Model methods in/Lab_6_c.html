@@ -1,0 +1,32 @@
+<!-- 9. Write a JavaScript that handles following mouse events. Add necessary elements. (B)
+JavaScript gives the key code for the key pressed.
+If the key pressed is “a”,”e”,”i”,”o”,”u”, the script should announce that vowel is pressed.
+When the key is released background should change to blue. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab_6_c.html</title>
+	<style type="text/css">
+		#fs{
+			font-size:120px;
+			display:none;
+            margin:auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="fs">GOOD JOB</div>
+<script type="text/javascript">
+	document.addEventListener("keydown",(e)=>{
+		if(e.key=='a'||e.key=='e'||e.key=='i'||e.key=='o'||e.key=='u'){
+			alert("Entering Cherecter is vowel");
+		}else{
+			document.getElementById('fs').style.width=200+'px';
+			document.getElementById('fs').style.height=200+'px';
+			document.getElementById('fs').style.backcolor='white';
+			document.getElementById('fs').style.display='block';
+		}
+	})
+</script>
+</body>
+</html>

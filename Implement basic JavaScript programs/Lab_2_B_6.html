@@ -1,0 +1,67 @@
+<!-- 6. Write an HTML page with JavaScript that takes a number from popup box in the range 0-
+999 and display it in words. If the number is out of range, it should show “out of range” and
+if it is not a number ,it should show “not a number” message in the result box. (A) -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lab_2_B_6.html</title>
+</head>
+<body>
+<script type="text/javascript">
+	// Time Complexity For this code is O(num);
+
+	function numberToWords(num) {
+		// const and let is keyword which add in ES6
+		const arr1 = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+		const arr2 = ['eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+		const arr3 = ['ten', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+		let words = '';
+        
+        // first we check given number is number or not a number using isNaN(a) function
+		if (isNaN(num))
+			 {
+				return 'Not a number';
+			 }
+		  else if (num < 0 || num > 999)
+			  {
+				// We check given number present in our range
+				return 'Out of range';
+			  }
+		  else if (num == 0)
+			  {
+				// check given number is 0
+				return arr1[0];
+			  }
+
+		if (num >= 100) 
+			{
+				words += arr1[Math.floor(num / 100)] + ' hundred ';
+				num %= 100;
+			}
+		if (num >= 20) 
+			{
+				words += arr3[Math.floor(num / 10) - 1] + ' ';
+				num %= 10;
+			}
+		 else if (num >= 10) 
+			{
+				words += arr2[num - 11] + ' ';
+				num = 0;
+			}
+		if (num > 0) 
+			{
+				words += arr1[num];
+			}
+
+		return words.trim();
+	}
+
+	let number = parseInt(prompt('Enter a number between 0 and 999'));
+	let result = numberToWords(number);
+	document.write(result);
+</script>
+</body>
+</html>

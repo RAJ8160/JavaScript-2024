@@ -1,0 +1,68 @@
+<!-- 4. WAP to read an array form the user and sort them using quick sort. (B) -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>QuickSort.html</title>
+</head>
+<body>
+<script type="text/javascript">
+    /*
+     worst case Time Complexity is O(n^2)
+     Quick Sort is Popular algorithm becuase it's Time complexity of Avarege Case is O(nlogn)
+    */
+
+    // Take Length of Array from user
+	let a=Number.parseInt(prompt("Enter length of array"));
+    
+    // Intialize Array
+    var arr=[a];
+    
+    // Gave Value in Array
+    for(var i=0;i<a;i++)
+    {
+    	arr[i]=Number.parseInt(prompt("Enter element of index"+i));
+    }
+
+     // It function is use to print array 
+    function printArray(arr){
+    	for(var i=0;i<arr.length;i++)
+    	{
+    		document.write(arr[i]+" ");
+    	}
+    }
+
+    
+   function QuickSort(arr) {
+    // Base case: arrays with fewer than 2 elements are already sorted
+    if (arr.length < 2) {
+        return arr;
+    }
+    
+    // Choose the pivot element (here, the last element in the array)
+    let pivot = arr[arr.length - 1];
+    
+    // Arrays to hold elements less than and greater than the pivot
+    let left = [];
+    let right = [];
+    
+    // Partitioning the array into left and right arrays
+    for (var i = 0; i < arr.length - 1; i++) {
+        if (arr[i] < pivot) {
+            left.push(arr[i]);
+        } else {
+            right.push(arr[i]);
+        }
+    }
+    
+    // Recursively sort the left and right arrays and combine them with the pivot
+    return [...QuickSort(left), pivot, ...QuickSort(right)];
+}
+
+    
+    printArray(QuickSort(arr));
+
+</script>
+</body>
+</html>

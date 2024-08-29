@@ -1,0 +1,42 @@
+<!-- 1. Demonstrate the use of array to ƒind maximum number. (A) -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MaxinArray.html</title>
+</head>
+<body>
+	<script type="text/javascript">
+	 // Taken length of array from user
+	 var a=Number.parseInt(prompt("Enter Size of array"));
+	 // make array
+	 var arr=[];
+	  
+	 // initalize array 
+	  for(var i=0;i<a;i++)
+		  {
+		  	// Here we first convert taken number into integer becuase given number in string
+		  	arr[i]=parseInt(prompt("Enter an element of "+i));
+		  }
+
+	  // print array
+	  console.log(arr);
+
+	 // always take first element of array in max from start for simplisity 
+	 var Max=arr[0];
+	  for(var i=0;i<a;i++)
+		  {
+		  	console.log(Max);
+
+		  	// here we check if number is grater than max save that number into max
+		  	if(arr[i]>Max)
+			  	{
+			  		Max=arr[i];
+			  	}
+		  }
+	  	
+	  // Gave answer
+	  document.write("Maximum number is "+Max);
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login.html</title>
+	<style type="text/css">
+		.main{
+			width:100%;
+			height:100%;
+			display:block;
+			margin:0 auto;
+		}
+		.row{
+			display:flex;
+			justify-content:center;
+			text-align:center;
+		}
+		.con{
+			margin:20px;
+		}
+	</style>
+</head>
+<body>
+	<form onsubmit="takevalue()">
+	<fieldset>	
+		<h1 style="text-align:center;">Login Form</h1>
+	<div class="main">
+	 	<div class="row">
+		 	  <div class="con">
+		 	    <label>Fist Name :</label>
+		 	     <input type="text" id="Fistname" value="Fistname" onclick="add()">
+		 	  </div>
+		 	<div class="con">
+		 		<label>Last Name :</label>
+		 		<input type="text" id="Lastname" value="Lastname" onclick="add()">
+		 	</div>
+		</div> 	
+	 	<div class="row">
+		 	<div class="con">
+			 	<label>Email :</label>
+			 	<input type="Email" id="Email" value="Email" onclick="add()">
+		 	</div>
+		 	<div class="con">
+		 		<label>Mobile Number:</label>
+		 		<input type="Number" id="Mobil" pattern="{0-9}{10}" value="Mobil" onclick="add()">
+		 	</div>
+		</div>
+		<hr>
+		<div class="row">
+		 	<div class="con">
+			 	<label>Address :</label>
+			 	<textarea id="Address" value="Address" onclick="add()"></textarea>
+		 	</div>
+		 	<div class="con">
+			 	<label>Gender :</label>
+			 	<input type="radio" value="Male" name="Male" onclick="add()">Male
+			 	<input type="radio" value="FeMale" name="FeMale" onclick="add()">Female
+		 	</div>
+		 	
+		</div>
+		<div class="row">
+			<div class="con">
+		 		<label>Collage</label>
+		 		<select><option>Darshan University</option>
+		 		        <option>Marvadi University</option>
+		 		        <option>RK University</option>
+		 		        <option>GEC University</option>
+		 		        <option>Harivandna University</option></select>
+		 	</div>
+		</div>
+		<hr>
+		<div class="row">
+		 	<div class="con">
+			 	<label>ACPC Rank :</label>
+			 	<input type="Number" id="ACPC" value="ACPC" onclick="add()">
+		 	</div>
+		 	<div class="con">
+		 		<label>Current Photo:</label>
+		 	</div>
+		</div>
+        <div class="row">
+		 	<div class="con">
+			 	<input type="submit" id="submit" onclick="submitData()">
+		 	</div>
+		 	<div class="con">
+		 		<button id="Reset" onclick="clear()">Reset</button>
+		 	</div>
+		</div>
+	</div>
+	<p id="target">
+		
+	</p>
+  </fieldset>
+  </form>
+<script type="text/javascript">
+	student="";
+	function add(value){
+		
+		ans.value+=value;
+		document.innerHTML=ans;
+	}
+	
+	// studentDetail()=>{
+	// 	 Fistname=document.getElementById('FistName').value;
+	// 	 Lastname=document.getElementById('LastName').value;
+	// 	 Email=document.getElementById('Email').value;
+	// 	 MobileNumber=document.getElementById('Mobil').value;
+	// 	 Address=document.getElementById('Address').value;
+	// 	 Gender=document.getElementById('Gender').value;
+	// 	 ACPCRank=document.getElementById('ACPC').value;
+	// }
+	function displayValue(){
+		
+		document.write("<table>");
+		document.write("<tr>");
+		for(i=0;i<student.length;i++){
+			ans+=document.write("<td>FistName :"+student[i].Fistname+"</td>");
+			ans+=document.write("<td>LastName :"+student[i].Lastname+"</td>");
+			ans+=document.write("<td>Email :"+student[i].Email+"</td>");
+			ans+=document.write("<td>MobileNumber :"+student[i].MobileNumber+"</td>");
+			ans+=document.write("<td>Address :"+student[i].Address+"</td>");
+			ans+=document.write("<td>Gender :"+student[i].Gender+"</td>");
+			ans+=document.write("<td>AcPC :"+student[i].ACPCRank+"</td>");
+		}
+		document.write("</tr>");
+		document.write("</table>");
+	}
+	function clearNum(){
+		clear=document.getElementById('target')
+		clear.value=" "
+	}
+	submitData(){
+		student.push(ans);
+		displayValue();
+	}
+</script>
+</body>
+</html>
