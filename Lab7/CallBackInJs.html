@@ -1,0 +1,35 @@
+<!-- 1. WAP to demonstrate callbacks in JavaScript. (A) -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CallBackInJs.html</title>
+</head>
+<body>
+<script type="text/javascript">
+	/*
+	Let is emplement in ES6
+	scop of let betwin where let write that function's,method's opening and closing perenthesis
+	*/
+
+	// get number from the user
+	let a=Number(prompt("Enter Number a "));
+	// get second number from the user
+	let b=Number(prompt("Enter Number b "));
+    
+    // This function is SayNamste to you when you call it
+    function SayNamste() {
+		console.log("Namaste Sir");
+	}
+
+	// This is call back function
+    function add(a,b,callback){
+    	console.log(a+b);
+    	callback();
+    }
+	
+	add(a,b,SayNamste);
+</script>
+</body>
+</html>

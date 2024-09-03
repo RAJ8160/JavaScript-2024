@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>let_var_in_JS.html</title>
+</head>
+<body>
+<script type="text/javascript">
+	// hoisting in JS
+	console.log("Outter a "+a);
+	// run code before uncommenting a 
+	// and run code after commenting a
+	// var a=10;
+	function abc(){
+		
+		 console.log("a In abc function "+a);
+
+		 function xyz(){
+		 	let a=12;
+		 	 console.log("a in xyz function "+a);
+		 	 a++;
+		 }
+         xyz();
+		 console.log("a outer xyz function "+a);
+	}
+	abc();
+	//we see here that var a is perform like global veriable
+	//where let is local variable
+</script>
+</body>
+</html>

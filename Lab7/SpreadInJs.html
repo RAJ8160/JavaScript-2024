@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SpreadInJs.html</title>
+</head>
+<body>
+<script type="text/javascript">
+	let arr1 = [1,2,3];
+	// add in last using spread operator
+	let arr2 = [5,4,6,...arr1];
+    
+    //add in first using spread operator
+	let arr3 = [...arr1,...arr2,6,7,8];
+
+	console.log(arr2);
+	console.log(arr3);
+
+</script>
+</body>
+</html>

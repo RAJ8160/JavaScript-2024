@@ -1,0 +1,36 @@
+<!-- 1. WAP to demonstrate callbacks in JavaScript. (A) -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CallBack.html</title>
+</head>
+<body>
+<script type="text/javascript">
+	function sayHello() {
+		console.log("Hello");
+	}
+	function sayHi() {
+		console.log("Hi...");
+	}
+	function sayGoodMorning() {
+		console.log("Good Morning");
+	}
+
+	function sum(a,b,callBack){
+		console.log(a+b);
+		callBack();
+	}
+
+     sum(2,3,sayHello);
+     sum(20,67,sayHi);
+     sum(22,34,sayGoodMorning);
+
+    // ananomus function
+     sum(23,34,()=>{
+		console.log("Bye..");
+	})
+</script>
+</body>
+</html>
